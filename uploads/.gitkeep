@@ -1,0 +1,2 @@
+# This file ensures the uploads directory is tracked in git
+# The actual upload directories will be created by the setup process
