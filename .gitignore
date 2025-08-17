@@ -1,0 +1,90 @@
+# Configuration files (contain sensitive data)
+/config/
+!/config/README.txt
+
+# Upload directories
+/uploads/
+!/uploads/.gitkeep
+
+# Log files
+/logs/
+*.log
+
+# Setup directory (should be deleted after installation)
+/setup/
+
+# Temporary files
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Backup files
+*.bak
+*.backup
+*.sql.backup
+
+# Cache files
+cache/
+tmp/
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Composer (if used)
+/vendor/
+composer.lock
+
+# Node modules (if used for build tools)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build artifacts
+/dist/
+/build/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# PHP specific
+*.php~
+*.phps
+.buildpath
+.project
+.settings/
+
+# Database dumps
+*.sql
+*.sqlite
+*.db
+
+# Media files (uploaded content)
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.mp4
+*.mov
+*.avi
+*.webm
+*.webp
+
+# Exceptions for demo/placeholder files
+!/assets/img/logo.svg
+!/assets/img/demo-*.svg
