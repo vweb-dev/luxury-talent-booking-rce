@@ -1,0 +1,33 @@
+RewriteEngine On
+
+# Security headers
+Header always set X-Content-Type-Options nosniff
+Header always set X-Frame-Options DENY
+Header always set X-XSS-Protection "1; mode=block"
+
+# Exclude existing files/folders and assets from rewrites
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Block access to sensitive directories
+RewriteRule ^config/ - [F,L]
+RewriteRule ^db/ - [F,L]
+RewriteRule ^models/ - [F,L]
+RewriteRule ^controllers/ - [F,L]
+
+# Clean URL rewrites
+RewriteRule ^login$ /login.php [L,QSA]
+RewriteRule ^saportal/login$ /saportal/login.php [L,QSA]
+RewriteRule ^explore$ /views/public/explore.php [L,QSA]
+RewriteRule ^client/feed$ /views/client/feed.php [L,QSA]
+RewriteRule ^client/(.*)$ /views/client/$1.php [L,QSA]
+RewriteRule ^talent/(.*)$ /views/talent/$1.php [L,QSA]
+RewriteRule ^admin/(.*)$ /views/admin/$1.php [L,QSA]
+RewriteRule ^saportal/(.*)$ /views/saportal/$1.php [L,QSA]
+
+# API routes
+RewriteRule ^api/(.*)$ /api/$1 [L,QSA]
+
+# Default fallback to index.php
+RewriteRule ^(.*)$ /index.php [L,QSA]
