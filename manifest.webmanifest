@@ -1,0 +1,28 @@
+{
+  "name": "Luxury Talent Booking — Red Carpet Edition",
+  "short_name": "RCE",
+  "description": "Reels-first talent discovery and broadcast bookings",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/assets/img/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/img/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "entertainment", "social"],
+  "lang": "en",
+  "dir": "ltr"
+}
