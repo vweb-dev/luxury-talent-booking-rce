@@ -1,0 +1,6 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="200" height="200" fill="#f0f0f0"/>
+<circle cx="100" cy="80" r="30" fill="#ddd"/>
+<path d="M70 120 Q100 140 130 120" stroke="#aaa" stroke-width="3" fill="none"/>
+<text x="100" y="170" text-anchor="middle" font-family="Arial" font-size="12" fill="#777">Demo Talent 3</text>
+</svg>
