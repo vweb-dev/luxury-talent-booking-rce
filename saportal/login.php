@@ -48,12 +48,7 @@ if (isset($_SESSION['user_id']) && $_SESSION['user_role'] === 'super_admin') {
                     <label for="sa_password">Password</label>
                     <input type="password" id="sa_password" name="password" required autocomplete="current-password">
                 </div>
-                
-                <div class="form-group">
-                    <label for="sa_token">Security Token</label>
-                    <input type="text" id="sa_token" name="security_token" required placeholder="Enter security token">
-                </div>
-                
+
                 <button type="submit" class="btn btn-primary btn-full">Secure Login</button>
                 
                 <div id="saLoginError" class="error-message" style="display: none;"></div>
