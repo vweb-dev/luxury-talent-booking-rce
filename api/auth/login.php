@@ -33,29 +33,15 @@ try {
     $username = $_POST['username'] ?? '';
     $password = $_POST['password'] ?? '';
     $portal = $_POST['portal'] ?? 'default';
-    $security_token = $_POST['security_token'] ?? '';
 
     // Validate input
     if (empty($username) || empty($password)) {
         throw new Exception('Username and password are required');
     }
 
-    // Special handling for super admin portal
-    if ($portal === 'saportal') {
-        if (empty($security_token)) {
-            throw new Exception('Security token is required for super admin access');
-        }
-        
-        // Log the attempt
-        $log_entry = date('Y-m-d H:i:s') . " - Super Admin login attempt: {$username} from IP: " . ($_SERVER['REMOTE_ADDR'] ?? 'unknown') . "\n";
-        if (!file_exists(__DIR__ . '/../../logs')) {
-            mkdir(__DIR__ . '/../../logs', 0755, true);
-        }
-        file_put_contents(__DIR__ . '/../../logs/saportal_access.log', $log_entry, FILE_APPEND | LOCK_EX);
     }
 
     // Authenticate user
-    $user = User::authenticate($username, $password, $portal, $security_token);
     
     if (!$user) {
         // Log failed attempt for super admin
@@ -76,7 +62,6 @@ try {
 
     // Determine redirect URL based on role
     $redirect_urls = [
-        'super_admin' => '/saportal/',
         'tenant_admin' => '/admin/',
         'talent' => '/talent/',
         'client' => '/client/feed'
@@ -84,10 +69,6 @@ try {
 
     $redirect_url = $redirect_urls[$user['role']] ?? '/client/feed';
 
-    // Log successful super admin login
-    if ($portal === 'saportal') {
-        $log_entry = date('Y-m-d H:i:s') . " - SUCCESS Super Admin login: {$username} from IP: " . ($_SERVER['REMOTE_ADDR'] ?? 'unknown') . "\n";
-        file_put_contents(__DIR__ . '/../../logs/saportal_access.log', $log_entry, FILE_APPEND | LOCK_EX);
     }
 
     // Return success response
