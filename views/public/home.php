@@ -46,6 +46,32 @@
         </div>
     </section>
 
+    <section class="demo-gallery" style="padding: 4rem 0; background: #fff;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Featured Talent</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <div class="talent-card" style="text-align: center; padding: 1.5rem; background: #f8f9fa; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <img src="/assets/img/demo-talent-1.svg" alt="Demo Talent 1" style="width: 100px; height: 100px; border-radius: 50%; margin-bottom: 1rem;">
+                    <h4>Jane Doe</h4>
+                    <p>Actress & Model</p>
+                    <p style="font-size: 0.9rem; color: #666;">Specializing in drama and fashion shoots.</p>
+                </div>
+                <div class="talent-card" style="text-align: center; padding: 1.5rem; background: #f8f9fa; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <img src="/assets/img/demo-talent-2.svg" alt="Demo Talent 2" style="width: 100px; height: 100px; border-radius: 50%; margin-bottom: 1rem;">
+                    <h4>John Smith</h4>
+                    <p>Singer & Performer</p>
+                    <p style="font-size: 0.9rem; color: #666;">Versatile vocalist with experience in live events.</p>
+                </div>
+                <div class="talent-card" style="text-align: center; padding: 1.5rem; background: #f8f9fa; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <img src="/assets/img/demo-talent-3.svg" alt="Demo Talent 3" style="width: 100px; height: 100px; border-radius: 50%; margin-bottom: 1rem;">
+                    <h4>Alex Johnson</h4>
+                    <p>Dancer & Choreographer</p>
+                    <p style="font-size: 0.9rem; color: #666;">Expert in contemporary and hip-hop dance styles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="cta" style="padding: 4rem 0; text-align: center;">
         <div class="container">
             <h2>Ready to Discover Premium Talent?</h2>
