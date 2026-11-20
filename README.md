@@ -1,3 +1,19 @@
+<!-- VWEB:AUTO-README:START -->
+<div align="center"><img src="assets/vweb-readme-banner.svg" width="100%" alt="luxury-talent-booking-rce project graphic" /></div>
+
+### Code-derived project snapshot
+
+| Attribute | Detected value |
+|---|---|
+| Latest source revision | `9dad98378a67` |
+| Tracked files reviewed | 42 |
+| Framework and platform indicators | PWA |
+| Source file types | PHP (22), JavaScript (3), CSS (1) |
+| Main directories | api, assets, views, cron, db, models, setup |
+
+> This section is regenerated from tracked filenames and manifests on code updates. It is not a QA or production-readiness certification. Handwritten project documentation is preserved.
+<!-- VWEB:AUTO-README:END -->
+
 # Luxury Talent Booking — Red Carpet Edition (RCE)
 
 **Reels-first talent discovery + broadcast bookings.** Single-ZIP deploy on cPanel.
